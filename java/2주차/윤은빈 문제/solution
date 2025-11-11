@@ -1,0 +1,12 @@
+(1)출력 결과
+은빈의 점수는 95점입니다.
+민재의 점수는 87점입니다.
+
+(2) 해설
+printInfo( ) 메서드는 객체의 필드(name, score) 값을 읽어와 화면에 출력하는 역할을 한다.
+
+(3) 정답 예시 (점수를 변경하는 메서드)
+void setScore(int newScore) {
+    score = newScore;
+}
+
