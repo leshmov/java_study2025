@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class hojin {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int cnt = 0;
+
+        for (int i = 0; i < N; i++) {
+            String s = sc.next();
+            String reversed = "";
+            
+            for (int j = s.length() - 1; j >= 0; j--) {
+                reversed = reversed + s.charAt(j);
+            }
+            
+            if (s.equals(reversed)) {
+                cnt++;
+            }
+        }
+
+        System.out.println(cnt);
+        sc.close();
+    }
+}
