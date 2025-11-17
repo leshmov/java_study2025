@@ -1,0 +1,57 @@
+class Base {
+    int num;
+
+    Base(int num) {
+        this.num = num;
+    }
+
+    int getNum() {
+        return num;
+    }
+}
+
+class Derived extends Base {
+    Derived(int val) {
+        super(val);
+    }
+
+    @Override
+    int getNum() {
+        return num * num;
+    }
+}
+
+public class NumTest {
+    public static void main(String[] args) {
+        Base b = new Base(10);
+        Derived d = new Derived(10);
+
+        System.out.println("기본 객체의 num 값: " + b.getNum());
+        System.out.println("하위 객체의 num 값: " + d.getNum());
+    }
+}
+
+ 1. 다음 코드가 실행될 때 출력되는 결과를 쓰시오.
+
+Base b = new Base(10);
+Derived d = new Derived(10);
+
+System.out.println("b.getNum() = " + b.getNum());
+        System.out.println("d.getNum() = " + d.getNum());
+
+// 조건
+// Base 클래스의 getNum()은 num을 그대로 반환한다.
+//Derived 클래스의 getNum()은 오버라이딩된 메서드로 num * num 을 반환한다.
+
+2. 아래 Derived 클래스 생성자에서 super(val)을 호출하는 이유를 서술하시오.
+Derived(int val) {
+    super(val);
+}
+
+ 3. 다음 코드 실행 시 출력값을 구하고, 어떤 메서드가 호출되는지 이유를 설명하시오.
+Base obj = new Derived(5);
+System.out.println(obj.getNum());
+
+// 조건
+// Base.getNum(): num 반환
+//Derived.getNum(): num * num 반환
