@@ -1,0 +1,29 @@
+문자열을 바꾸지 않기 때문에 정수를 10으로 나누고 나머지를 활용하는 방식으로 자릿수를 분리함
+예) 1234
+1234 % 10 → 4
+123 % 10 → 3
+12 % 10 → 2
+1 % 10 → 1
+이렇게 뽑아낸 숫자를 순서대로 새로운 정수에 붙이면 뒤집힌 숫자가 된다.
+
+
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("숫자를 입력하세요: ");
+        int num = sc.nextInt();
+        int reversed = 0;
+
+        while (num > 0) { 
+            int digit = num % 10; 
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+
+        System.out.println("뒤집힌 숫자: " + reversed);
+    }
+}
