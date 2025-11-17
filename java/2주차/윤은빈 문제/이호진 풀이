@@ -6,4 +6,6 @@
 정보 출력용
 
 (3)
-setter 메소
+void setScore(int s) {
+    score = s;
+}
