@@ -5,7 +5,8 @@ class Book {
     int price;
 
     Book(String title, int price) {
-        // 여기를 완성해보세요
+        this.title = title; //@@@@@@@
+        this.price = price; //@@@@@@@
     }
 
     void printInfo() {
