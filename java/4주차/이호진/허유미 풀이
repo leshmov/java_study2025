@@ -1,0 +1,31 @@
+public class charReverse {
+    public static void main(String[] args) {
+        int N = 5;
+        String arr[] = {"wow", "banana", "apple", "hello", "noon"};
+
+        int count = 0;
+
+        for (int i = 0; i < N; i++) {
+            String s = arr[i];
+            boolean isPalindrome = true;
+
+            int left = 0;
+            int right = s.length() - 1;
+
+            while (left < right) {
+                if (s.charAt(left) != s.charAt(right)) {
+                    isPalindrome = false;
+                    break;
+                }
+                left++;
+                right--;
+            }
+
+            if (isPalindrome) {
+                count++;
+            }
+        }
+
+        System.out.println("문자열 개수: " + count);
+    }
+}
